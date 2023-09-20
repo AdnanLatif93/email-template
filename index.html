@@ -33,11 +33,12 @@
         }
 
         .content {
-            padding: 20px;
+            padding: 10px;
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
             gap: 20px;
+            /* justify-content: center; */
         }
 
         .footer {
@@ -77,7 +78,7 @@
         .card-content-heading {
             font-family: 'Poppins';
             font-weight: 600;
-            font-size: 20px;
+            font-size: 19px;
             line-height: 27px;
             color: #1D1D1E;
         }
@@ -114,10 +115,9 @@
         }
 
         .date {
-            background: linear-gradient(to bottom, rgba(43, 101, 157, 1), rgba(43, 101, 157, 1), rgba(14, 65, 114, 1));
-            ;
-            padding: 30px;
-            max-width: 300px;
+            background: linear-gradient(to bottom, rgba(43, 101, 157, 1), rgba(43, 101, 157, 1), rgba(14, 65, 114, 1));;
+            padding: 30px 10px;
+            max-width: 230px;
             width: auto;
             margin: auto;
         }
@@ -140,6 +140,10 @@
 
         .m-20 {
             margin: 20px;
+        }
+
+        .m-10-auto {
+            margin: 10px auto;
         }
 
         .d-flex {
@@ -174,9 +178,13 @@
         }
 
         /* Responsive container (optional) */
-        @media (min-width: 320px)and (max-width:564px) {
+        @media (min-width: 320px)and (max-width:703px) {
             .content {
                 justify-content: center;
+            }
+
+            .header-heading1 {
+                font-size: 21px;
             }
         }
 
@@ -187,7 +195,13 @@
         }
 
         @media (max-width: 768px) {
+            hr{
+                margin-top: 30px;
+                max-width: 300px;
+            }
             .mobile-container {
+                max-width: 230px;
+                margin-top: 30px;
                 display: block;
                 padding: 32px;
                 gap: 16px;
@@ -229,7 +243,7 @@
 
 <body>
     <div class="container">
-        <div class="header">
+        <div class="header m-10-auto">
             <h1 class="header-heading1 m-t-5" align="center">Events in your city next week</h1>
             <img src="./assets/svg/citiapplogo.svg" alt="">
             <h1 class="header-heading2 m-t-5" align="center">Hi</h1>
@@ -242,9 +256,9 @@
             </div>
 
         </div>
-        <div class="content">
-            <div class="card" style="max-width: 250px; max-height: 330px;">
-                <img src="./assets/Frame.png" alt="" style="max-width: 100%; max-height: 50%;">
+        <div class="content m-10-auto">
+            <div class="card" style="max-width: 330px; max-height: 330px;">
+                <img src="./assets/Frame.png" alt="" style="max-width: 100%; max-height: 100%;">
                 <div class="card-content" style="max-width: 100%; max-height: 50%;">
                     <h4 class="m-t-0 card-content-heading"><b>Forward Quality Technician</b></h4>
                     <div class="card-content-detail">
@@ -257,8 +271,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card" style="max-width: 250px; max-height: 330px;">
-                <img src="./assets/Frame.png" alt="" style="max-width: 100%; max-height: 50%;">
+            <div class="card" style="max-width: 330px; max-height: 330px;">
+                <img src="./assets/Frame.png" alt="" style="max-width: 100%; max-height: 100%;">
                 <div class="card-content" style="max-width: 100%; max-height: 50%;">
                     <h4 class="m-t-0 card-content-heading"><b>Forward Quality Technician</b></h4>
                     <div class="card-content-detail">
@@ -271,8 +285,8 @@
                     </div>
                 </div>
             </div>
-            <div class="card" style="max-width: 250px; max-height: 330px;">
-                <img src="./assets/Frame.png" alt="" style="max-width: 100%; max-height: 50%;">
+            <div class="card" style="max-width: 330px; max-height: 330px;">
+                <img src="./assets/Frame.png" alt="" style="max-width: 100%; max-height: 100%;">
                 <div class="card-content" style="max-width: 100%; max-height: 50%;">
                     <h4 class="m-t-0 card-content-heading"><b>Forward Quality Technician</b></h4>
                     <div class="card-content-detail">
@@ -286,7 +300,7 @@
                 </div>
             </div>
         </div>
-        <div class="mobile-container">
+        <div class="mobile-container m-10-auto">
             <div class="mobile-container-store">
                 <img src="./assets/mobileLogo.png" alt="" style="margin: auto;">
                 <img src="./assets/iosPlayStore.png" alt="">
@@ -298,12 +312,12 @@
             </div>
         </div>
         <hr>
-        <div class="footer footer-content-detail">
+        <div class="footer footer-content-detail m-10-auto">
             <div class="m-20 footer-container">
                 <img src="./assets/citiapp-footer-logo.png" alt="">
                 <div class="m-t-5 ">
-                    <p class="m-t-0">Har du några frågor?</p>
-                    <p class="m-t-0">Kontakt oss på</p>
+                    <p class="m-t-0">Do you have any questions?</p>
+                    <p class="m-t-0">Contact Us</p>
                 </div>
             </div>
             <div class="m-20 d-flex content-center  gap-20 external-link color-white">

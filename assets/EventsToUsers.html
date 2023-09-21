@@ -1,0 +1,329 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="x-apple-disable-message-reformatting">
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <!--[if !mso]><!-->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <!--<![endif]-->
+    <!--[if (gte mso 9)|(IE)]>
+    <xml>
+      <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+      </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+    <!--[if (gte mso 9)|(IE)]>
+<style type="text/css">
+  body {width: 600px;margin: 0 auto;}
+  table {border-collapse: collapse;}
+  table, td {mso-table-lspace: 0pt;mso-table-rspace: 0pt;}
+  img {-ms-interpolation-mode: bicubic;}
+</style>
+<![endif]-->
+    <title>Your Email Title</title>
+    <style>
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            background-color: #6A92B8;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: fit-content;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .mobile-container {
+            display: none;
+        }
+
+        .header {
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .content {
+            padding: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            gap: 20px;
+            /* justify-content: center; */
+        }
+
+        .footer {
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .footer-content-detail {
+            font-family: 'Poppins';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 15px;
+            color: rgba(0, 0, 0, 0.5);
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            transition: 0.3s;
+            border-radius: 5px;
+            border: 1px solid white;
+            background-color: rgba(240, 240, 240, 0.55);
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            border-radius: 5px 5px 0 0;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content-heading {
+            font-family: 'Poppins';
+            font-weight: 600;
+            font-size: 19px;
+            line-height: 27px;
+            color: #1D1D1E;
+        }
+
+        .card-content-detail {
+            font-family: 'Poppins';
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 19px;
+            color: rgba(29, 29, 30, 0.8);
+            ;
+        }
+
+        .header-heading1 {
+            color: #F7D65E;
+            font-weight: 700;
+            font-size: 35px;
+            line-height: 52.5px;
+            margin-top: 0;
+        }
+
+        .header-heading2 {
+            color: #F7D65E;
+            font-weight: 600;
+            font-size: 50px;
+            line-height: 60px;
+        }
+
+        .header-content {
+            font-family: 'inter';
+            font-weight: 600;
+            font-size: 18px;
+            line-height: 10px;
+        }
+
+        .date {
+            background: linear-gradient(to bottom, rgba(43, 101, 157, 1), rgba(43, 101, 157, 1), rgba(14, 65, 114, 1));
+            padding: 30px 10px;
+            max-width: 230px;
+            width: auto;
+            margin: auto;
+        }
+
+        .date span {
+            font-family: 'inter';
+            font-weight: 600;
+            font-size: 13px;
+            line-height: 17px;
+        }
+
+        .m-t-5 {
+            margin-top: 5px;
+        }
+
+        .m-t-0 {
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .m-20 {
+            margin: 20px;
+        }
+
+        .m-10-auto {
+            margin: 10px auto;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .space-between {
+            justify-content: space-between;
+        }
+
+        .content-center {
+            justify-content: center;
+        }
+
+        .gap-20 {
+            gap: 20px;
+        }
+
+        hr {
+            height: 2px;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+
+        .color-white {
+            color: white;
+        }
+
+        .external-link a {
+            text-decoration: none;
+            color: white;
+        }
+
+        /* Responsive container (optional) */
+        @media (min-width: 320px)and (max-width:768px) {
+            .content {
+                justify-content: center;
+            }
+
+            .header-heading1 {
+                font-size: 21px;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: 720px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            hr{
+                margin-top: 30px;
+                max-width: 230px;
+            }
+            .mobile-container {
+                max-width: 230px;
+                margin-top: 30px;
+                display: block;
+                padding: 30px 15px;
+                gap: 16px;
+                background: linear-gradient(to bottom, rgba(43, 101, 157, 1), rgba(14, 65, 114, 1));
+            }
+
+            .mobile-container-store {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .mobile-container-content>:first-child {
+                color: #F7D65E;
+            }
+
+            .mobile-container-content {
+                font-family: 'Poppins';
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: 1140px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header m-10-auto">
+            <h1 class="header-heading1 m-t-5" align="center">Events in your city next week</h1>
+            <img src="./assets/svg/citiapplogo.svg" alt="">
+            <h1 class="header-heading2 m-t-5" align="center">Hi</h1>
+            <div class="header-content" align="center">
+                <p>Here are events in</p>
+                <p>your city</p>
+            </div>
+            <div class="date">
+                <span>From {{from_date}} to {{to_date}}</span>
+            </div>
+
+        </div>
+        <div class="card-content content m-10-auto">
+            <div class="card" style="max-width: 330px; max-height: 330px;">
+                <img src="./assets/Frame.png" alt="" style="width: 330px;max-width: 100%;max-height:150px;">
+                <div class="card-content" style="max-width: 100%;max-height: 155px;overflow: hidden;overflow-y: auto;">
+                    <h4 class="m-t-0 card-content-heading"><b>{{title}}</b></h4>
+                    <div class="card-content-detail">
+                        <p class="m-t-0">{{event_date}} </p>
+                        <p class="m-t-0">{{address}}</p>
+                        <div class="d-flex space-between">
+                            <p class="m-t-0">{{attendance}} Attending </p>
+                            <p class="m-t-0"><img src="./assets/pin.png" alt=""> {{distance}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-container m-10-auto">
+            <div class="mobile-container-store">
+                <img src="./assets/mobileLogo.png" alt="" style="margin: auto;">
+                <img src="./assets/iosPlayStore.png" alt="">
+                <img src="./assets/googlePlayStore.png" alt="">
+            </div>
+            <div class="mobile-container-content">
+                <p>Share your experience</p>
+                <p>By leaving a review on the App Store or Google Play, you help us enhance Citiapp even further.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="footer footer-content-detail m-10-auto">
+            <div class="m-20 footer-container">
+                <img src="./assets/citiapp-footer-logo.png" alt="">
+                <div class="m-t-5 ">
+                    <p class="m-t-0">Do you have any questions?</p>
+                    <p class="m-t-0">Contact Us</p>
+                </div>
+            </div>
+            <div class="m-20 d-flex content-center  gap-20 external-link color-white">
+                <a href="http://" target="_blank" rel="noopener noreferrer">info@citiapp.se</a>
+                |
+                <a href="http://" target="_blank" rel="noopener noreferrer"> www.citiapp.se</a>
+            </div>
+            <div class="m-20 social-logo">
+                <a href="#"><img src="./assets/Facebook.png" alt=""></a>
+                <a href="#"><img src="./assets/instagram.png" alt=""></a>
+            </div>
+            <div class="m-20 color-white">
+                <p>Powered by Olivux 2022</p>
+                <p>Copyright &copy; 2022</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>

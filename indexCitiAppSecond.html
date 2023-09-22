@@ -174,13 +174,18 @@
         .container {
             margin: 0 auto;
             background-color: rgba(255, 255, 255, 1);
-            height: inherit;
+            height: 100%;
         }
 
         /*Styles for screens wider than 1920px (MacBook Pro 14" Pro)*/
         @media (min-width : 1920px) {
             .container {
                 max-width: 94.5rem;
+            }
+
+            .alpha-container,
+            .container {
+                height: 100vh;
             }
         }
 
@@ -196,7 +201,8 @@
             .container {
                 max-width: 48rem;
             }
-            .grid{
+
+            .grid {
                 grid-gap: 2rem;
             }
         }
@@ -206,20 +212,24 @@
             .container {
                 max-width: 47rem;
             }
-            .grid{
+
+            .grid {
                 grid-gap: 1rem;
             }
+
             .header-content h1 {
                 font-size: 26px;
                 line-height: 31.47px;
             }
+
             .header-content .date {
                 font-size: 12px;
                 line-height: 18px;
             }
+
             .mobile-container {
                 max-width: 230px;
-                margin:50px auto 0px auto;
+                margin: 50px auto 0px auto;
                 display: block;
                 padding: 40px 50px;
                 background: rgba(247, 247, 245, 1);
@@ -233,10 +243,10 @@
             }
 
             .mobile-container-content>:first-child {
-              font-weight: 700;
-              font-size: 18px;
-              line-height: 21.78px;
-              text-align: center;
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 21.78px;
+                text-align: center;
             }
 
             .mobile-container-content {
@@ -246,13 +256,16 @@
                 line-height: 18px;
                 color: rgba(37, 35, 35, 1);
             }
-            .alpha-container, .container{
+
+            .alpha-container,
+            .container {
                 height: auto;
             }
 
         }
+
         @media (max-width: 690px) {
-            .grid{
+            .grid {
                 grid-template-columns: minmax(0, max-content);
                 justify-content: center;
                 padding: 0 20px;
@@ -270,10 +283,10 @@
                     <h1>Events in your city next week</h1>
                     <div class="date">
                         <span><img src="./assets/svg/date-icon-svg.svg" style="vertical-align:middle"><span
-                                style="vertical-align:middle">&nbsp;&nbsp;2023-07-01</span></span>
+                                style="vertical-align:middle">&nbsp;&nbsp;{{from_date}}</span></span>
                         <span>to</span>
                         <span><img src="./assets/svg/date-icon-svg.svg" style="vertical-align:middle"><span
-                                style="vertical-align:middle">&nbsp;&nbsp;2023-07-07</span></span>
+                                style="vertical-align:middle">&nbsp;&nbsp;{{to_date}}</span></span>
                     </div>
                 </div>
             </div>
@@ -283,8 +296,10 @@
                     <div class="card__content">
                         <h1 class="card__header">{{title}}</h1>
                         <div class="card__text">
-                            <p><img src="./assets/time-icon.png" alt="time" width="14.58px" height="16.69px">{{from_date}}</p>
-                            <p><img src="./assets/location-icon.png" alt="location" width="12.33px" height="16.69px">{{to_date}}</p>
+                            <p><img src="./assets/time-icon.png" alt="time" width="14.58px"
+                                    height="16.69px">{{event_date}}</p>
+                            <p><img src="./assets/location-icon.png" alt="location" width="12.33px"
+                                    height="16.69px">{{address}}</p>
                         </div>
                     </div>
                 </div>
@@ -293,8 +308,10 @@
                     <div class="card__content">
                         <h1 class="card__header">{{title}}</h1>
                         <div class="card__text">
-                            <p><img src="./assets/time-icon.png" alt="time" width="14.58px" height="16.69px">{{event_date}}</p>
-                            <p><img src="./assets/location-icon.png" alt="location" width="12.33px" height="16.69px">{{address}}</p>
+                            <p><img src="./assets/time-icon.png" alt="time" width="14.58px"
+                                    height="16.69px">{{event_date}}</p>
+                            <p><img src="./assets/location-icon.png" alt="location" width="12.33px"
+                                    height="16.69px">{{address}}</p>
                         </div>
                     </div>
                 </div>
@@ -302,7 +319,8 @@
             <div class="mobile-container">
                 <div class="mobile-container-content">
                     <p>Share your experience 🌟</p>
-                    <p>By leaving a review on the App Store or Google Play, you help us enhance Citiapp even further.🚀</p>
+                    <p>By leaving a review on the App Store or Google Play, you help us enhance Citiapp even further.🚀
+                    </p>
                 </div>
                 <div class="mobile-container-store">
                     <img src="./assets/iosPlayStore.png" alt="">
@@ -329,4 +347,5 @@
         </div>
     </div>
 </body>
+
 </html>

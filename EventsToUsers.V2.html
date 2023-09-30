@@ -49,10 +49,6 @@
             padding-top: 100px;
         }
 
-        .app__logo {
-            padding-bottom: 40px;
-        }
-
         .header-content {
             background-color: rgba(247, 247, 245, 1);
             color: rgba(37, 35, 35, 1);
@@ -88,7 +84,7 @@
         }
 
         .hero-card {
-         margin-top: 50px;
+            margin-top: 50px;
         }
 
         .grid {
@@ -275,6 +271,7 @@
                 padding: 0 20px;
             }
         }
+
         @media (max-width: 425px) {
             .grid {
                 grid-template-columns: 1fr;
@@ -298,8 +295,20 @@
                 </div>
             </div>
         </div>
-        <ul class="hero-card grid" id="cardList">
-        </ul>
+        <div class="hero-card grid">
+            {{#each events}}
+            <div class="card grid__item">
+                <img class="card__img" src="{{this.ImageUri}}" alt="">
+                <div class="card__content">
+                    <h1 class="card__header">{{this.Title}}</h1>
+                    <div class="card__text">
+                        <p><img src="http://cdn.mcauto-images-production.sendgrid.net/8dd4ff12adc6c521/37692980-2373-423f-b8d5-971c0b68eea5/15x17.png" alt="time" width="14.58px" height="16.69px">{{this.DateTime}}</p>
+                        <p><img src="http://cdn.mcauto-images-production.sendgrid.net/8dd4ff12adc6c521/5dbd8fd0-c563-4fd8-80e4-d09c27318e6b/9x13.png" alt="location" width="12.33px" height="16.69px">{{this.Address}}</p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
         <div class="container mobile-container">
             <div class="mobile-container-content">
                 <p>Share your experience 🌟</p>
@@ -309,8 +318,8 @@
             <div class="mobile-container-store">
                 <a href="https://apps.apple.com/se/app/citiapp/id1639882237?l=en"> <img src="./assets/iosPlayStore.png"
                         alt=""></a>
-                <a href="https://play.google.com/store/apps/details?id=com.citiapp0630"><img src="./assets/googlePlayStore.png"
-                        alt=""></a>
+                <a href="https://play.google.com/store/apps/details?id=com.citiapp0630"><img
+                        src="./assets/googlePlayStore.png" alt=""></a>
             </div>
         </div>
         <div class="hero-footer" align="center">
@@ -334,41 +343,5 @@
         </div>
     </div>
 </body>
-<script>
-    // Sample data for the loop
-    const data = [
-      {
-        title: "Event 1",
-        event_date: "2023-09-30",
-        address: "123 Main Street",
-      },
-      {
-        title: "Event 2",
-        event_date: "2023-10-15",
-        address: "456 Elm Street",
-      },
-      // Add more data objects as needed
-    ];
-  
-    // Get the ul element by its ID
-    const cardList = document.getElementById("cardList");
-  
-    // Loop through the data and generate list items
-    data.forEach((item) => {
-      const li = document.createElement("li");
-      li.className = "card grid__item";
-      li.innerHTML = `
-        <img class="card__img" src="./assets/Frame.png" alt="">
-        <div class="card__content">
-            <h1 class="card__header">${item.title}</h1>
-            <div class="card__text">
-                <p><img src="./assets/time-icon.png" alt="time" width="14.58px" height="16.69px">${item.event_date}</p>
-                <p><img src="./assets/location-icon.png" alt="location" width="12.33px" height="16.69px">${item.address}</p>
-            </div>
-        </div>
-      `;
-  
-      cardList.appendChild(li);
-    });
-  </script>
+
 </html>

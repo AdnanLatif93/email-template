@@ -73,40 +73,91 @@
             align-items: center;
             gap: 20px;
         }
-        #mainTable{
+
+        #mainTable {
             width: 600px;
         }
-        .hero__header{
+
+        .hero__header {
             padding: 40px 37px;
         }
-        .date__table{
+
+        .date__table {
             width: 60%;
         }
-        @media (max-width:768px){
-            #mainTable{
+
+        .hero__header__title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 38.73px;
+            text-align: center;
+            font-family: 'inter';
+            color: rgba(37, 35, 35, 1);
+        }
+
+        .hero__header__date {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: center;
+            font-family: 'inter';
+            color: rgba(37, 35, 35, 1);
+        }
+
+        @media (max-width:768px) {
+            #mainTable {
                 width: 300px;
             }
+
             .img__grid {
                 flex-direction: column;
             }
-            .hero__header{
+
+            .hero__header {
                 padding: 40px 10px;
             }
-            .date__table{
+
+            .hero__header__title {
+                font-size: 26px;
+                font-weight: 700;
+                line-height: 30px;
+            }
+
+            .hero__header__date {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 18px;
+            }
+
+            .date__table img {
+                width: 15px;
+                height: 15px;
+            }
+
+            .card__text {
+                font-size: 12px;
+                line-height: 19px;
+            }
+        }
+
+        @media (min-width:512px) and (max-width: 768px) {
+
+            .img__grid_mobile {
+                width: 500px !important;
+            }
+
+            .img__grid_mobile .img__grid_contentImg {
+                width: 500px !important;
+            }
+        }
+
+        @media (max-width:420px) {
+            .date__table {
                 width: 100%;
             }
         }
-        @media (min-width:512px) and (max-width: 768px) {
-           
-            .img__grid_mobile {
-                width: 500px !important;
-            }
 
-            .img__grid_mobile .img__grid_contentImg {
-                width: 500px !important;
-            }
-        }
-        @media (min-width:420px) and (max-width:511px)  {
+        @media (min-width:420px) and (max-width:511px) {
             .img__grid_mobile {
                 width: 400px !important;
             }
@@ -115,7 +166,8 @@
                 width: 400px !important;
             }
         }
-        @media  (max-width:419px)  {
+
+        @media (max-width:419px) {
             .img__grid_mobile {
                 width: 300px !important;
             }
@@ -141,13 +193,12 @@
                         </td>
                     </tr>
                     <tr>
-                        <td class="hero__header" style="background-color: rgba(247, 247, 245, 1)  ;">
+                        <td class="hero__header" style="background-color: rgba(247, 247, 245, 1);">
                             <table align="center" role="presentation"
                                 style="width:100%;border-collapse:collapse;border:0;border-spacing:0; text-align: center;">
                                 <tr>
                                     <td>
-                                        <h1
-                                            style="font-size: 32px; font-weight: 700; line-height: 38.73px; text-align: center; font-family: 'inter'; color: rgba(37, 35, 35, 1);">
+                                        <h1 class="hero__header__title">
                                             Events in your City next Week
                                         </h1>
                                     </td>
@@ -156,8 +207,7 @@
                                     <td>
                                         <table role="presentation" align="center" class="date__table"
                                             style="padding: 0; border-collapse: collapse; border-spacing: 0;">
-                                            <tr align="center"
-                                                style="font-size: 16px; font-weight: 400; line-height: 24px; text-align: center; font-family: 'inter'; color: rgba(37, 35, 35, 1);">
+                                            <tr align="center" class="hero__header__date">
                                                 <td
                                                     style="display: flex; align-items: center; gap: 10px; justify-content: center;">
                                                     <img src="./svg/date-icon-svg.svg" alt="">
@@ -351,8 +401,8 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style=" font-family:'inter'" height="100%"
-                                            valign="top" bgcolor="" role="module-content">
+                                        <td style=" font-family:'inter'" height="100%" valign="top" bgcolor=""
+                                            role="module-content">
                                             <div>
                                                 <div style="font-family: inherit; text-align: center">
                                                     <a style="text-decoration: none; color: rgba(0, 0, 0, 1);"
@@ -360,7 +410,8 @@
                                                     <a style="text-decoration: none; color: rgba(0, 0, 0, 1);"
                                                         href="mailto:info@citiapp.se?subject=&amp;body=">info@citiapp.se</a>
                                                 </div>
-                                                <div style="display: flex;justify-content: center;gap: 20px;align-items: center;padding: 20px;">
+                                                <div
+                                                    style="display: flex;justify-content: center;gap: 20px;align-items: center;padding: 20px;">
                                                     <a href="https://www.facebook.com/profile.php?id=100088346630406"
                                                         target="_blank"><img src="./svg/facebook.svg" alt=""></a>
                                                     <a href="https://instagram.com/citiapp.sweden?igshid=YTQwZjQ0NmI0OA=="

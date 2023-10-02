@@ -1,14 +1,16 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office">
 
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <meta name="x-apple-disable-message-reformatting">
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     <title></title>
-  <!--[if !mso]><!-->
+    <!--[if !mso]><!-->
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <!--<![endif]-->
     <!--[if (gte mso 9)|(IE)]>
@@ -28,6 +30,12 @@
     </style>
   <![endif]-->
     <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: contents;
+        }
+
         table,
         td,
         div,
@@ -65,28 +73,67 @@
             align-items: center;
             gap: 20px;
         }
-
-        @media (max-width: 768px) {
+        #mainTable{
+            width: 600px;
+        }
+        .hero__header{
+            padding: 40px 37px;
+        }
+        .date__table{
+            width: 60%;
+        }
+        @media (max-width:768px){
+            #mainTable{
+                width: 300px;
+            }
             .img__grid {
                 flex-direction: column;
             }
-            .img__grid_mobile{
-                width: 500px!important;
+            .hero__header{
+                padding: 40px 10px;
             }
-            .img__grid_mobile .img__grid_contentImg{
-                width: 500px!important;
+            .date__table{
+                width: 100%;
+            }
+        }
+        @media (min-width:512px) and (max-width: 768px) {
+           
+            .img__grid_mobile {
+                width: 500px !important;
+            }
+
+            .img__grid_mobile .img__grid_contentImg {
+                width: 500px !important;
+            }
+        }
+        @media (min-width:420px) and (max-width:511px)  {
+            .img__grid_mobile {
+                width: 400px !important;
+            }
+
+            .img__grid_mobile .img__grid_contentImg {
+                width: 400px !important;
+            }
+        }
+        @media  (max-width:419px)  {
+            .img__grid_mobile {
+                width: 300px !important;
+            }
+
+            .img__grid_mobile .img__grid_contentImg {
+                width: 300px !important;
             }
         }
     </style>
 </head>
 
-<body style="margin:0;padding:0;">
+<body style="margin:0;padding:0;display: contents;">
     <table role="presentation"
         style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
         <tr>
             <td align="center" style="padding:0;">
-                <table role="presentation"
-                    style="width:602px;border-collapse:separate;border:1px solid #cccccc;border-spacing:0 60px;text-align:left;">
+                <table role="presentation" id="mainTable"
+                    style="border-collapse:separate;border-spacing:0 60px;text-align:left;">
                     <tr>
                         <td align="center" style="padding:40px 0 30px 0">
                             <img src="./svg/cittiappLogomac.svg" alt="" width="170"
@@ -94,7 +141,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <td style="padding:40px 37px; background-color: rgba(247, 247, 245, 1)  ;" >
+                        <td class="hero__header" background-color: rgba(247, 247, 245, 1)  ;">
                             <table align="center" role="presentation"
                                 style="width:100%;border-collapse:collapse;border:0;border-spacing:0; text-align: center;">
                                 <tr>
@@ -107,8 +154,8 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <table role="presentation" align="center"
-                                            style="width: 60%; padding: 0; border-collapse: collapse; border-spacing: 0;">
+                                        <table role="presentation" align="center" class="date__table"
+                                            style="padding: 0; border-collapse: collapse; border-spacing: 0;">
                                             <tr align="center"
                                                 style="font-size: 16px; font-weight: 400; line-height: 24px; text-align: center; font-family: 'inter'; color: rgba(37, 35, 35, 1);">
                                                 <td
@@ -131,7 +178,6 @@
                                 </tr>
                             </table>
                         </td>
-
                     </tr>
                     <tr>
                         <td>
@@ -141,18 +187,19 @@
                                     <td style="padding:0;">
                                         <table role="presentation"
                                             style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
-                                            <tr class="img__grid"> 
+                                            <tr class="img__grid">
                                                 <!--apply loop here-->
                                                 <!--apply loop here-->
                                                 <!--apply loop here-->
                                                 <!--apply loop here-->
                                                 <!--apply loop here-->
                                                 <!--apply loop here-->
-                                                <td class="img__grid_mobile" style="width:300px;padding:0;vertical-align:top;background-color: rgba(240, 240, 240, 0.55);border-radius: 8px; border: 1px solid rgba(235, 235, 235, 1);">
+                                                <td class="img__grid_mobile"
+                                                    style="width:300px;padding:0;vertical-align:top;background-color: rgba(240, 240, 240, 0.55);border-radius: 8px; border: 1px solid rgba(235, 235, 235, 1);">
                                                     <p
                                                         style="margin:0 0 25px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
-                                                        <img class="img__grid_contentImg" src="./Frame.png" alt="" width="300"
-                                                            style="height:auto;display:block;" />
+                                                        <img class="img__grid_contentImg" src="./Frame.png" alt=""
+                                                            width="300" style="height:auto;display:block;" />
                                                     </p>
                                                     <table
                                                         style="width: 100%; border-spacing:15px 0; border-collapse: separate; margin: 0px 10px 0px 0px;"
@@ -167,12 +214,13 @@
                                                             <tr>
                                                                 <td>
                                                                     <div class="card__text">
-                                                                        <table  style="border-collapse: separate;  border-spacing: 0px 10px;">
-                                                                            <tr >
+                                                                        <table
+                                                                            style="border-collapse: separate;  border-spacing: 0px 10px;">
+                                                                            <tr>
                                                                                 <th><img src="http://cdn.mcauto-images-production.sendgrid.net/8dd4ff12adc6c521/37692980-2373-423f-b8d5-971c0b68eea5/15x17.png"
                                                                                         alt="time" width="14.58px"
                                                                                         height="16.69px"></th>
-                                                                                <td valign="top" >
+                                                                                <td valign="top">
                                                                                     &nbsp;&nbsp;<span>{{this.DateTime}}</span>
                                                                                 </td>
                                                                             </tr>
@@ -193,11 +241,12 @@
                                                         </tbody>
                                                     </table>
                                                 </td>
-                                                <td class="img__grid_mobile" style="width:300px;padding:0;vertical-align:top;background-color: rgba(240, 240, 240, 0.55);border-radius: 8px; border: 1px solid rgba(235, 235, 235, 1);">
+                                                <td class="img__grid_mobile"
+                                                    style="width:300px;padding:0;vertical-align:top;background-color: rgba(240, 240, 240, 0.55);border-radius: 8px; border: 1px solid rgba(235, 235, 235, 1);">
                                                     <p
                                                         style="margin:0 0 25px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
-                                                        <img class="img__grid_contentImg" src="./Frame.png" alt="" width="300"
-                                                            style="height:auto;display:block;" />
+                                                        <img class="img__grid_contentImg" src="./Frame.png" alt=""
+                                                            width="300" style="height:auto;display:block;" />
                                                     </p>
                                                     <table
                                                         style="width: 100%; border-spacing:15px 0; border-collapse: separate; margin: 0px 10px 0px 0px;"
@@ -212,12 +261,13 @@
                                                             <tr>
                                                                 <td>
                                                                     <div class="card__text">
-                                                                        <table  style="border-collapse: separate;  border-spacing: 0px 10px;">
-                                                                            <tr >
+                                                                        <table
+                                                                            style="border-collapse: separate;  border-spacing: 0px 10px;">
+                                                                            <tr>
                                                                                 <th><img src="http://cdn.mcauto-images-production.sendgrid.net/8dd4ff12adc6c521/37692980-2373-423f-b8d5-971c0b68eea5/15x17.png"
                                                                                         alt="time" width="14.58px"
                                                                                         height="16.69px"></th>
-                                                                                <td valign="top" >
+                                                                                <td valign="top">
                                                                                     &nbsp;&nbsp;<span>{{this.DateTime}}</span>
                                                                                 </td>
                                                                             </tr>
@@ -238,7 +288,7 @@
                                                         </tbody>
                                                     </table>
                                                 </td>
-                                               
+
                                                 <!--apply card loop above -->
                                                 <!--apply card loop above -->
                                                 <!--apply card loop above -->
@@ -255,12 +305,14 @@
                             <table style="border-collapse: separate; border-spacing: 40px 0px; padding: 40px 0px;">
                                 <tbody>
                                     <tr>
-                                        <td style="font-family: 'inter'; font-weight: 700; font-size: 18px; line-height: 21.78px;">
+                                        <td
+                                            style="font-family: 'inter'; font-weight: 700; font-size: 18px; line-height: 21.78px;">
                                             <span>Share your experience 🌟</span>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <td style="font-family: 'inter'; font-weight: 400; font-size: 12px; line-height: 18px;">
+                                        <td
+                                            style="font-family: 'inter'; font-weight: 400; font-size: 12px; line-height: 18px;">
                                             <p>By leaving a review on the App Store or Google Play, you help us enhance
                                                 Citiapp even further.🚀
                                             </p>
@@ -275,7 +327,8 @@
                                     <tr style="text-align: center;">
                                         <td style="padding-top: 20px;">
                                             <a href="https://play.google.com/store/apps/details?id=com.citiapp0630"><img
-                                                    src="./svg//Google-play-black.svg" alt="" width="200" height="72"></a>
+                                                    src="./svg//Google-play-black.svg" alt="" width="200"
+                                                    height="72"></a>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -285,7 +338,8 @@
                     <tr>
                         <td>
                             <table class="module" role="module" data-type="text" border="0" cellpadding="0"
-                                cellspacing="0" width="100%" style="table-layout: fixed; border-collapse: separate; border-spacing: 40px 40px;">
+                                cellspacing="0" width="100%"
+                                style="table-layout: fixed; border-collapse: separate; border-spacing: 40px 40px;">
                                 <tbody
                                     style="font-family: 'inter'; font-weight: 400; font-size: 14px; line-height: 16px; text-align: center; color: rgba(0, 0, 0, 1);">
                                     <tr>
@@ -322,7 +376,6 @@
                                 </tbody>
                             </table>
                         </td>
-
                     </tr>
                 </table>
             </td>

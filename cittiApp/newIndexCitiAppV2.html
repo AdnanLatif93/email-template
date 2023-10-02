@@ -229,8 +229,10 @@
                             </table>
                         </td>
                     </tr>
+                    
                     <tr>
                         <td>
+                            {{#each events}}
                             <table role="presentation"
                                 style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                                 <tr>
@@ -238,7 +240,7 @@
                                         <table role="presentation"
                                             style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
                                             <tr class="img__grid">
-                                                {{#each events}}
+                                                <!-- {{#each events}} -->
                                                 <td class="img__grid_mobile"
                                                     style="width:300px;padding:0;vertical-align:top;background-color: rgba(240, 240, 240, 0.55);border-radius: 8px; border: 1px solid rgba(235, 235, 235, 1);">
                                                     <p
@@ -286,12 +288,13 @@
                                                         </tbody>
                                                     </table>
                                                 </td>
-                                                {{/each}}
+                                                <!-- {{/each}} -->
                                             </tr>
                                         </table>
                                     </td>
                                 </tr>
                             </table>
+                            {{/each}}
                         </td>
                     </tr>
                     <tr>

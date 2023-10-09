@@ -84,7 +84,7 @@
         }
 
         .date__table {
-            width: 60%;
+            width: 40%;
         }
 
         .hero__header__title {
@@ -105,13 +105,40 @@
             color: rgba(37, 35, 35, 1);
         }
 
+        .card__container-table-tr {
+            display: block;
+        }
+
+        .table-td {
+            display: table-row;
+        }
+
         @media (max-width:768px) {
+
+
             #mainTable {
                 width: 300px;
             }
 
+            .table-td {
+                display: table-column;
+            }
+
+            .card__container-table {
+                display: table;
+            }
+
+            .card__container-table-tr {
+                display: grid;
+                margin: 0 auto;
+            }
+
             .img__grid {
                 flex-direction: column;
+            }
+
+            .img__grid_mobile {
+                margin: 0 auto !important;
             }
 
             .hero__header {
@@ -184,9 +211,9 @@
     <table role="presentation"
         style="width:100%;border-collapse:collapse;border:0;border-spacing:0;background:#ffffff;">
         <tr>
-            <td align="center" style="padding:0;">
+            <td align="center">
                 <table role="presentation" id="mainTable"
-                    style="border-collapse:separate;border-spacing:0 60px;text-align:left;">
+                    style="border-collapse:separate;border-spacing:0 40px;text-align:left;display: block; margin: 0 auto; padding: 0; table-layout: fixed;">
                     <tr>
                         <td align="center">
                             <img src="./svg/cittiappLogomac.svg" alt="" width="170"
@@ -230,7 +257,7 @@
                             </table>
                         </td>
                     </tr>
-                    
+
                     <tr>
                         <td>
                             <table role="presentation"
@@ -238,58 +265,66 @@
                                 <tr>
                                     <td style="padding:0;">
                                         <table role="presentation"
-                                            style="width:100%;border-collapse:collapse;border:0;border-spacing:0;">
-                                            <tr class="img__grid">
-                                                {{#each events}}
-                                                <td class="img__grid_mobile"
-                                                    style="width:310px;max-width: 315px; padding:0;vertical-align:top;background-color: rgba(240, 240, 240, 0.55);border-radius: 8px; border: 1px solid rgba(235, 235, 235, 1);table-layout: fixed;">
-                                                    <p
-                                                        style="margin:0 0 25px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
-                                                        <img class="img__grid_contentImg" src="{{this.ImageUri}}" alt=""
-                                                            width="300" style="height:auto;display:block;" />
-                                                    </p>
-                                                    <table
-                                                        style="width: 100%; max-height: 300px; border-spacing:15px 0; border-collapse: separate; margin: 0px 10px 0px 0px;"
-                                                        cellpadding="0" cellspacing="0" align="left" border="0">
-                                                        <tbody>
-                                                            <tr>
-                                                                <td
-                                                                    style="padding: 0px; margin: 0px; border-spacing: 0;">
-                                                                    <h1 class="card__header">{{this.Title}}</h1>
-                                                                </td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>
-                                                                    <div class="card__text">
-                                                                        <table
-                                                                            style="border-collapse: separate;  border-spacing: 0px 10px;">
-                                                                            <tr>
-                                                                                <th><img src="./svg/time_icon.svg"
-                                                                                        alt="time" width="14.58px"
-                                                                                        height="16.69px"></th>
-                                                                                <td valign="top">
-                                                                                    &nbsp;&nbsp;<span>{{this.DateTime}}</span>
-                                                                                </td>
-                                                                            </tr>
-                                                                            <tr>
-                                                                                <th>
-                                                                                    <img src="./svg/pin_location.svg"
-                                                                                        alt="location" width="12.33px"
-                                                                                        height="16.69px">
-                                                                                </th>
-                                                                                <td valign="top">
-                                                                                    &nbsp;&nbsp;<span>{{this.Address}}</span>
-                                                                                </td>
-                                                                            </tr>
-                                                                        </table>
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </td>
-                                                {{/each}}
+                                            style="width:100%;border-collapse:separate;border:0;border-spacing:10px 0px; table-layout: fixed;"
+                                            class="card__container-table">
+                                            {{#each events}}
+                                            {{#if @index % 2 === 0}}
+                                            <tr class="card__container-table-tr">
+                                                {{/if}}
+                                                <div class="table-td">
+                                                    <td class="img__grid_mobile"
+                                                        style="width:290px;max-width:290px; table-layout: fixed;vertical-align:top;background-color: rgba(240, 240, 240, 0.55);border-radius: 8px; border: 1px solid rgba(235, 235, 235, 1); margin: 12px;">
+                                                        <p
+                                                            style="margin:0 0 25px 0;font-size:16px;line-height:24px;font-family:Arial,sans-serif;">
+                                                            <img class="img__grid_contentImg" src="{{this.ImageUri}}"
+                                                                alt="" width="290" style="height:auto;display:block;" />
+                                                        </p>
+                                                        <table
+                                                            style="width: 100%; max-height: 300px; border-spacing:15px 0; border-collapse: separate; margin: 0px 10px 0px 0px;"
+                                                            cellpadding="0" cellspacing="0" align="left" border="0">
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td
+                                                                        style="padding: 0px; margin: 0px; border-spacing: 0;">
+                                                                        <h1 class="card__header">{{this.Title}}</h1>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="card__text">
+                                                                            <table
+                                                                                style="border-collapse: separate;  border-spacing: 0px 10px;">
+                                                                                <tr>
+                                                                                    <th><img src="./svg/time_icon.svg"
+                                                                                            alt="time" width="14.58px"
+                                                                                            height="16.69px"></th>
+                                                                                    <td valign="top">
+                                                                                        &nbsp;&nbsp;<span>{{this.DateTime}}</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                                <tr>
+                                                                                    <th>
+                                                                                        <img src="./svg/pin_location.svg"
+                                                                                            alt="location"
+                                                                                            width="12.33px"
+                                                                                            height="16.69px">
+                                                                                    </th>
+                                                                                    <td valign="top">
+                                                                                        &nbsp;&nbsp;<span>{{this.Address}}</span>
+                                                                                    </td>
+                                                                                </tr>
+                                                                            </table>
+                                                                        </div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </td>
+                                                </div>
+                                                {{#if @index % 2 !== 0}}
                                             </tr>
+                                            {{/if}}
+                                            {{/each}}
                                         </table>
                                     </td>
                                 </tr>
@@ -298,7 +333,8 @@
                     </tr>
                     <tr>
                         <td style="background-color: rgba(247, 247, 245, 1);">
-                            <table style="border-collapse: separate;border-spacing: 40px 0px;padding: 40px 0px; table-layout: fixed;">
+                            <table
+                                style="border-collapse: separate;border-spacing: 40px 0px;padding: 40px 0px; table-layout: fixed;">
                                 <tbody>
                                     <tr>
                                         <td
